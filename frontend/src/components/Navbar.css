@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  width: 50rem;
+  justify-content: space-between;
+  align-items: top;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.nav-brand { font-weight: 700; font-size: 1.1rem; color: #2d3748; }
+
+.nav-links { display: flex; gap: 1.5rem; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: #3182ce; }

@@ -1,0 +1,29 @@
+# .github/workflows/sync-to-hf.yml
+name: Sync to HuggingFace Space
+
+on:
+  push:
+    branches: [main]
+    paths: [backend/**]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push backend to HuggingFace
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "ci@github.com"
+          git config --global user.name "GitHub Actions"
+          cd backend
+          git init
+          git remote add hf https://user:${HF_TOKEN}@huggingface.co/spaces/Omesh777/Stroke-Prediction
+          git add -A
+          git commit -m "sync from GitHub"
+          git push hf HEAD:main --force
