@@ -51,8 +51,8 @@ export default function PredictionForm() {
   return (
     <div className="container">
       <div className="header">
-        <h1>Stroke Risk Predictor</h1>
-        <p>Fill in patient details to assess stroke risk</p>
+        <h1>Assessment panel</h1>
+        <p>Enter the patient profile and let the model generate a stroke-risk estimate.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="form">
