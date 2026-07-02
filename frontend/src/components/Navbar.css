@@ -2,8 +2,8 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  padding: 1rem clamp(1rem, 2vw, 1.5rem);
   pointer-events: none;
+  padding: 1rem;
 }
 
 .navbar.is-scrolled .navbar-inner {
@@ -24,15 +24,15 @@
 
 .navbar-inner {
   pointer-events: auto;
-  max-width: 1240px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 0.4rem;
+  padding: 0.75rem 4.4rem;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 999px 0px ;
   background: rgba(3, 7, 18, 0.18);
   box-shadow: none;
   backdrop-filter: blur(10px);
@@ -77,14 +77,14 @@
 }
 
 .brand-title {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .brand-subtitle {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
@@ -100,7 +100,7 @@
   color: var(--text-muted);
   border-radius: 999px;
   padding: 0.72rem 1rem;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 600;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
